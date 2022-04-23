@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "56508553182",
+    "project_id": "maduka-fc2e2",
+    "storage_bucket": "maduka-fc2e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:56508553182:android:023bb06f169384cda3af4f",
+        "android_client_info": {
+          "package_name": "com.eph.maduka"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "56508553182-qvd0m69u8drpouk36ls12ffaocet4q7m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJ7n2hhLUB1oq52PMUfCqMxiIwl26BeW0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "56508553182-qvd0m69u8drpouk36ls12ffaocet4q7m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
