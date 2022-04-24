@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Maduka</string>
     <string name="defaultweb_client_id">56508553182-qvd0m69u8drpouk36ls12ffaocet4q7m.apps.googleusercontent.com</string>
+    <string name="sugar">sugar</string>
 </resources>
