@@ -1,15 +1,19 @@
 package com.eph.maduka;
-
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.eph.maduka.adapters.HomeAdapter;
 import com.eph.maduka.databinding.ActivityMainBinding;
 import com.eph.maduka.models.Products;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +21,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     RecyclerView recyclerView;
+    ImageView imageView;
 
     List<Products> products = new ArrayList<>();
     String[] names;
@@ -34,8 +39,21 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = binding.recyclerView;
         HomeAdapter adapter = new HomeAdapter(this,products);
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        recyclerView.setAdapter(adapter);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        //Log out
+        imageView =findViewById(R.id.logoutIcon);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                Toast.makeText(getApplicationContext(),"Logged out",Toast.LENGTH_LONG).show();
+                Intent loginScreen = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(loginScreen);
+            }
+        });
+
     }
 
     private void setUpProducts(){

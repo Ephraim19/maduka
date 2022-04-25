@@ -2,6 +2,7 @@
     <string name="app_name" translatable="false">Maduka</string>
     <string name="defaultweb_client_id" translatable="false">56508553182-qvd0m69u8drpouk36ls12ffaocet4q7m.apps.googleusercontent.com</string>
     <string name="sugar">sugar</string>
+    <string name="home">Home</string>
     <string-array name="productNames">
         <item>sugar</item>
         <item>sanitizer</item>
