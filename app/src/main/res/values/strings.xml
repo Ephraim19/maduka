@@ -1,5 +1,19 @@
 <resources>
-    <string name="app_name">Maduka</string>
-    <string name="defaultweb_client_id">56508553182-qvd0m69u8drpouk36ls12ffaocet4q7m.apps.googleusercontent.com</string>
+    <string name="app_name" translatable="false">Maduka</string>
+    <string name="defaultweb_client_id" translatable="false">56508553182-qvd0m69u8drpouk36ls12ffaocet4q7m.apps.googleusercontent.com</string>
     <string name="sugar">sugar</string>
+    <string-array name="productNames">
+        <item>sugar</item>
+        <item>sanitizer</item>
+        <item>omo</item>
+        <item>fanta</item>
+        <item>menengai</item>
+        <item>water</item>
+        <item>rice</item>
+        <item>pens</item>
+        <item>book</item>
+        <item>liquid cooking oil</item>
+        <item>solid cooking oil</item>
+        <item>salt</item>
+    </string-array>
 </resources>
