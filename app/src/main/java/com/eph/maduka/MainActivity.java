@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = binding.recyclerView;
         HomeAdapter adapter = new HomeAdapter(this,products);
-//        recyclerView.setAdapter(adapter);
-//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         //Log out
         imageView =findViewById(R.id.logoutIcon);
