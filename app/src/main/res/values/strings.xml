@@ -3,18 +3,31 @@
     <string name="defaultweb_client_id" translatable="false">56508553182-qvd0m69u8drpouk36ls12ffaocet4q7m.apps.googleusercontent.com</string>
     <string name="sugar">sugar</string>
     <string name="home">Home</string>
+    <string name="welcome">Welcome</string>
+    <string name="item">Item</string>
     <string-array name="productNames">
-        <item>sugar</item>
-        <item>sanitizer</item>
-        <item>omo</item>
-        <item>fanta</item>
-        <item>menengai</item>
-        <item>water</item>
-        <item>rice</item>
-        <item>pens</item>
-        <item>book</item>
-        <item>liquid cooking oil</item>
-        <item>solid cooking oil</item>
-        <item>salt</item>
+        <item>Sugar</item>
+        <item>Sanitizer</item>
+        <item>Omo</item>
+        <item>Fanta</item>
+        <item>Menengai</item>
+        <item>Water</item>
+        <item>Rice</item>
+        <item>Pens</item>
+        <item>Book</item>
+        <item>Liquid cooking oil</item>
+        <item>Solid cooking oil</item>
+        <item>Salt</item>
     </string-array>
 </resources>
+
+
+
+
+
+
+
+
+
+
+

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity"
+    tools:context=".ui.MainActivity"
     >
 
     <com.google.android.material.appbar.AppBarLayout
@@ -41,13 +41,13 @@
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                app:layout_constraintStart_toEndOf="@+id/ProfilePhoto"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/logoutIcon"
                 android:layout_width="wrap_content"
-                android:layout_height="20dp"
+                android:layout_height="35dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.823"
@@ -56,17 +56,20 @@
                 app:layout_constraintVertical_bias="0.666"
                 app:srcCompat="@drawable/logout" />
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ProfilePhoto"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_marginStart="40dp"
+                app:shapeAppearanceOverlay="@style/roundedImageViewRounded"
+                app:strokeColor="@color/blueBlack"
+                app:strokeWidth="1dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.625"
                 app:srcCompat="@drawable/face" />
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

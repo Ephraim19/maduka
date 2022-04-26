@@ -1,4 +1,4 @@
-package com.eph.maduka;
+package com.eph.maduka.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.eph.maduka.R;
 import com.eph.maduka.databinding.ActivityLoginBinding;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -47,6 +48,7 @@ public class LoginActivity extends AppCompatActivity {
         // Configure Google Client
         configureGoogleClient();
     }
+
     private void configureGoogleClient() {
         // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -55,14 +57,16 @@ public class LoginActivity extends AppCompatActivity {
                 .requestIdToken(getString(R.string.defaultweb_client_id))
                 .requestEmail()
                 .build();
+
         // Build a GoogleSignInClient with the options specified by gso.
         googleSignInClient = GoogleSignIn.getClient(this, gso);
         // Set the dimensions of the sign-in button.
-        SignInButton signInButton = findViewById(R.id.signInButton);
+        SignInButton signInButton = binding.signInButton;
         signInButton.setSize(SignInButton.SIZE_WIDE);
         // Initialize Firebase Auth
         firebaseAuth = FirebaseAuth.getInstance();
     }
+
     @Override
     public void onStart() {
         super.onStart();
@@ -70,7 +74,7 @@ public class LoginActivity extends AppCompatActivity {
         FirebaseUser currentUser = firebaseAuth.getCurrentUser();
         if (currentUser != null) {
             showToastMessage("Currently Logged in: " + currentUser.getEmail());
-            Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
         }
     }
@@ -87,17 +91,16 @@ public class LoginActivity extends AppCompatActivity {
             try {
                 // Google Sign In was successful, authenticate with Firebase
                 GoogleSignInAccount account = task.getResult(ApiException.class);
-                showToastMessage("Google Sign in Succeeded");
+                //binding.progressBar.setVisibility(View.VISIBLE);
+                Toast.makeText(this,"Logging in...",Toast.LENGTH_LONG).show();
                 firebaseAuthWithGoogle(account);
             } catch (ApiException e) {
                 // Google Sign In failed, update UI appropriately
-                Log.w(TAG, "Google sign in failed", e);
                 showToastMessage("Google Sign in Failed " + e);
             }
         }
     }
     private void firebaseAuthWithGoogle(GoogleSignInAccount account) {
-        Log.d(TAG, "firebaseAuthWithGoogle:" + account.getId());
         AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(), null);
         firebaseAuth.signInWithCredential(credential)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -106,8 +109,6 @@ public class LoginActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             FirebaseUser user = firebaseAuth.getCurrentUser();
-                            Log.d(TAG, "signInWithCredential:success: currentUser: " + user.getEmail());
-                            showToastMessage("Firebase Authentication Succeeded ");
                             launchMainActivity(user);
                         } else {
                             // If sign in fails, display a message to the user.
@@ -123,6 +124,7 @@ public class LoginActivity extends AppCompatActivity {
     private void launchMainActivity(FirebaseUser user) {
         if (user != null) {
             Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+            //binding.progressBar.setVisibility(View.INVISIBLE);
             startActivity(intent);
             finish();
         }

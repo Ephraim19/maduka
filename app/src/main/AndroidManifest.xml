@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Maduka">
         <activity
-            android:name=".LoginActivity"
+            android:name=".profile.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,15 +22,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="false"/>
+            android:name=".ui.MainActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
-
-
-
-
-
-
-
