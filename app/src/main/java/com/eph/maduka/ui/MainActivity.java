@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.eph.maduka.R;
 import com.eph.maduka.adapters.HomeAdapter;
 import com.eph.maduka.databinding.ActivityMainBinding;
+import com.eph.maduka.interfaces.HomeAdapterInterface;
 import com.eph.maduka.models.Products;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -24,7 +25,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements HomeAdapterInterface {
     private ActivityMainBinding binding;
     RecyclerView recyclerView;
     ImageView imageView;
@@ -45,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         setUpProducts();
 
         recyclerView = binding.recyclerView;
-        HomeAdapter adapter = new HomeAdapter(this,products);
+        HomeAdapter adapter = new HomeAdapter(this,products,this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -100,6 +101,12 @@ public class MainActivity extends AppCompatActivity {
         for(int i=0; i < names.length; i++){
             products.add(new Products(image[i], names[i], price[i],quantity[i]));
         }
+    }
+
+    @Override
+    public void onButtonAddClick(int position) {
+
+        Toast.makeText(MainActivity.this,products.get(position).getNames(),Toast.LENGTH_SHORT).show();
     }
 }
 
