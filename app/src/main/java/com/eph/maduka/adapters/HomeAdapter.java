@@ -38,6 +38,8 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
     public void onBindViewHolder(@NonNull HomeAdapter.MyViewHolder holder, int position) {
         holder.productImage.setImageResource(products.get(position).getImage());
         holder.textView.setText(products.get(position).getNames());
+        holder.textPrice.setText(products.get(position).getPrice());
+        holder.textQuantity.setText(products.get(position).getQuantity());
     }
 
     @Override
@@ -47,11 +49,13 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder> 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView productImage;
-        TextView textView;
+        TextView textView, textPrice,textQuantity;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             productImage = itemView.findViewById(R.id.imageView);
             textView = itemView.findViewById(R.id.textView);
+            textPrice = itemView.findViewById(R.id.Price);
+            textQuantity = itemView.findViewById(R.id.Quantity);
         }
     }
 }

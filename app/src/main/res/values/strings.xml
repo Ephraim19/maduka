@@ -5,6 +5,10 @@
     <string name="home">Home</string>
     <string name="welcome">Welcome</string>
     <string name="item">Item</string>
+    <string name="price">Price</string>
+    <string name="ksh_200">Ksh 200</string>
+    <string name="_1_kg">1 kg</string>
+    <string name="quantity">Quantity</string>
     <string-array name="productNames">
         <item>Sugar</item>
         <item>Sanitizer</item>
@@ -19,7 +23,42 @@
         <item>Solid cooking oil</item>
         <item>Salt</item>
     </string-array>
+    <string-array name="productPrice">
+        <item>120</item>
+        <item>200</item>
+        <item>40</item>
+        <item>50</item>
+        <item>180</item>
+        <item>30</item>
+        <item>120</item>
+        <item>10</item>
+        <item>15</item>
+        <item>215</item>
+        <item>100</item>
+        <item>20</item>
+    </string-array>
+    <string-array name="productQuantity">
+        <item>1 kg</item>
+        <item>100 ml</item>
+        <item>1 kg</item>
+        <item>500ml</item>
+        <item>1 kg</item>
+        <item>1 litre</item>
+        <item>1 kg</item>
+        <item>none</item>
+        <item>120 pages</item>
+        <item>1 litre</item>
+        <item>500 ml</item>
+        <item>1 kg</item>
+    </string-array>
 </resources>
+
+
+
+
+
+
+
 
 
 

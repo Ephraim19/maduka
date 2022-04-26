@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
     List<Products> products = new ArrayList<>();
     String[] names;
+    String[] price;
+    String[] quantity;
     int[] image = {R.drawable.sugar,R.drawable.sanitizer,R.drawable.omo,R.drawable.fanta,R.drawable.menengai,R.drawable.water___m,R.drawable.rice,R.drawable.pens,R.drawable.a4book,R.drawable.oil,R.drawable.oils,R.drawable.salt};
 
     @Override
@@ -93,9 +95,10 @@ public class MainActivity extends AppCompatActivity {
     //Initialize the products
     private void setUpProducts(){
         names = getResources().getStringArray(R.array.productNames);
-
-        for(int i=1; i < names.length; i++){
-            products.add(new Products(image[i], names[i]));
+        price = getResources().getStringArray(R.array.productPrice);
+        quantity = getResources().getStringArray(R.array.productQuantity);
+        for(int i=0; i < names.length; i++){
+            products.add(new Products(image[i], names[i], price[i],quantity[i]));
         }
     }
 }

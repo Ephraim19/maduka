@@ -2,13 +2,36 @@ package com.eph.maduka.models;
 
 public class Products {
     private int image;
-    private String names; //The total amount of a product
-//    private Integer sold; //The total sold item
+    private String names;
+    private String price; //The price of an item
+    private String quantity;
 //    private  Integer remaining; //total - sold
 
-    public Products(int image, String names) {
+    public Products(int image, String names, String price,String quantity) {
         this.image = image;
         this.names = names;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
+    public String getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(){
+        this.price = price;
     }
 
     public int getImage() {
@@ -27,6 +50,20 @@ public class Products {
         this.names = names;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
