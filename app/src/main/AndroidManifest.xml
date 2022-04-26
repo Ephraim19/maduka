@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Maduka">
         <activity
-            android:name=".profile.ProfileActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.LoginActivity"
             android:exported="true">
             <intent-filter>

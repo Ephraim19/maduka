@@ -19,8 +19,8 @@
         <item>Rice</item>
         <item>Pens</item>
         <item>Book</item>
-        <item>Liquid cooking oil</item>
-        <item>Solid cooking oil</item>
+        <item>Liquid oil</item>
+        <item>Solid oil</item>
         <item>Salt</item>
     </string-array>
     <string-array name="productPrice">

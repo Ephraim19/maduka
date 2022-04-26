@@ -105,7 +105,6 @@ public class MainActivity extends AppCompatActivity implements HomeAdapterInterf
 
     @Override
     public void onButtonAddClick(int position) {
-
         Toast.makeText(MainActivity.this,products.get(position).getNames(),Toast.LENGTH_SHORT).show();
     }
 }
